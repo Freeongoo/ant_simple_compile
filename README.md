@@ -33,5 +33,5 @@ ant clean
 
 ## Built With
 
-* [jUnit](https://junit.org/junit4/) - The test framework
+* [jUnit](https://junit.org/junit4/)
 * [Ant](https://ant.apache.org/)
