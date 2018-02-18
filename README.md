@@ -10,13 +10,13 @@ Start compile
 ant compile
 ```
 
-Start unit-tests
+Start unit-tests (compile)
 
 ```
 ant test
 ```
 
-Start package jar (comile and test)
+Start package jar (compile, test)
 
 ```
 ant package 
@@ -25,6 +25,13 @@ or
 ```
 ant 
 ```
+
+Run jar (compile, test, package)
+
+```
+ant run 
+```
+
 Clear build dir
 
 ```
