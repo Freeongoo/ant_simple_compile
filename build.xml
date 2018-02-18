@@ -7,6 +7,7 @@
     <property name="test.build.dir" value="${build}/test"/>
     <property name="test.build.dir.classes" value="${test.build.dir}/classes"/>
     <property name="test.src.dir" value="${src}/test/java"/>
+    <property name="main.class" value="com.hello.HelloWorld"/>
 
     <path id="classpath.test">
         <pathelement location="lib/junit-4.12.jar"/>
@@ -42,12 +43,16 @@
     <target name="package" depends="test">
         <jar destfile="${main.build.dir}/${ant.project.name}.jar" basedir="${main.build.dir.classes}">
             <manifest>
-                <attribute name="Main–Class" value="${ant.project.name}"/>
+                <attribute name="Main-Class" value="${main.class}" />
             </manifest>
         </jar>
     </target>
 
     <target name="all" depends="package">
+    </target>
+
+    <target name="run" depends="package">
+        <java jar="${main.build.dir}/${ant.project.name}.jar" fork="true"/>
     </target>
 
     <target name="clean">
