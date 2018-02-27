@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <project name="ant_simple_compile" default="all">
     <property name="src" value="src"/>
     <property name="build" value="build"/>
@@ -8,10 +10,11 @@
     <property name="test.build.dir.classes" value="${test.build.dir}/classes"/>
     <property name="test.src.dir" value="${src}/test/java"/>
     <property name="main.class" value="com.hello.HelloWorld"/>
+    <property name="lib" value="lib"/>
 
     <path id="classpath.test">
-        <pathelement location="lib/junit-4.12.jar"/>
-        <pathelement location="lib/hamcrest-core-1.3.jar"/>
+        <pathelement location="${lib}/junit-4.12.jar"/>
+        <pathelement location="${lib}/hamcrest-core-1.3.jar"/>
         <pathelement location="${main.build.dir.classes}"/>
     </path>
 
